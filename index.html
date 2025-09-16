@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>จังหวัดสมุทรสาคร — พรีเซนเทชั่น</title>
+  <meta name="description" content="ข้อมูลจังหวัดสมุทรสาคร: ประวัติ ความสำคัญทางเศรษฐกิจ สถานที่สำคัญ และภาพรวมทั่วไป" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fbff; --card:#ffffff; --accent:#0b6cff; --muted:#6b7280; --accent-2:#0466c8;
+      --max-width:1000px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Kanit',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#0f1724; line-height:1.5}
+    .container{max-width:var(--max-width); margin:32px auto; padding:20px}
+    header{display:flex;gap:20px;align-items:center}
+    .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:24px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,30,60,0.06)}
+
+    /* hero image */
+    .hero{height:220px;border-radius:10px;overflow:hidden;background:#dbeafe;display:flex;align-items:center;justify-content:center}
+    .hero img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* sections */
+    section + section{margin-top:16px}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* info list */
+    dl{display:grid;grid-template-columns:140px 1fr;gap:8px 12px}
+    dt{font-weight:600;color:#0b6cff}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:96px;object-fit:cover;border-radius:8px}
+
+    /* sidebar */
+    aside .card{position:sticky;top:24px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#e6f0ff;color:var(--accent);font-weight:600;font-size:13px}
+
+    /* tabs */
+    .tabs{display:flex;gap:8px;margin-bottom:12px}
+    .tab{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid #eef2ff;color:var(--accent);cursor:pointer}
+    .tab.active{background:var(--accent);color:white;border-color:var(--accent)}
+
+    /* footer */
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .hero{height:160px}
+    }
+
+    /* print */
+    @media print{
+      body{background:white}
+      .container{margin:0;padding:0}
+      aside{display:none}
+      header .logo{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="logo" aria-hidden>สค.</div>
+      <div>
+        <h1>จังหวัดสมุทรสาคร</h1>
+        <p class="lead">เมืองประมงและอุตสาหกรรมที่สำคัญของประเทศไทย — ประวัติ, เศรษฐกิจ, สถานที่สำคัญ</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <div class="hero" aria-hidden>
+            <!-- ใส่ภาพจริง: แทนที่ URL ด้านล่างเมื่อพร้อม -->
+            <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ภาพวิวชายฝั่งมหาชัย" />
+          </div>
+
+          <section aria-labelledby="history">
+            <h2 id="history">ประวัติความเป็นมา</h2>
+            <p class="small">จังหวัดสมุทรสาครเดิมเป็นเมืองท่าที่สำคัญ มีชุมชนการค้ากับชาวจีนตั้งแต่สมัยอยุธยา เมืองมหาชัยถูกขยายและพัฒนาเป็นท่าเรือ ต่อมารัชกาลที่ 4 ได้มีการใช้ชื่อว่า <strong>สมุทรสาคร</strong> พื้นที่เติบโตด้วยการประมงและการขนส่งทางน้ำ</p>
+          </section>
+
+          <section aria-labelledby="economy">
+            <h2 id="economy">เศรษฐกิจและอุตสาหกรรม</h2>
+            <p class="small">สมุทรสาครได้รับสมญานามว่า "เมืองประมง" มีอุตสาหกรรมแปรรูปอาหารทะเล ตลาดมหาชัยเป็นศูนย์กลางการจำหน่ายอาหารทะเล นอกเหนือจากประมง ยังมีโรงงานอุตสาหกรรมการผลิต เช่น สิ่งทอ และคลัสเตอร์โรงงานเพื่อการส่งออก</p>
+            <dl>
+              <dt>คำขวัญ</dt><dd>เมืองประมง ดงโรงงาน ลานเกษตร เขตประวัติศาสตร์</dd>
+              <dt>ชื่อเดิม</dt><dd>มหาชัย</dd>
+              <dt>ตำแหน่ง</dt><dd>ปากแม่น้ำท่าจีน ริมอ่าวไทย</dd>
+            </dl>
+          </section>
+
+          <section aria-labelledby="landmarks">
+            <h2 id="landmarks">สถานที่สำคัญ</h2>
+            <ul>
+              <li>ตลาดมหาชัย — ตลาดอาหารทะเลสดและแปรรูป</li>
+              <li>วัดช่องลม และ วัดภุมรินทร์กุฎีทอง — วัดเก่าแก่ของพื้นที่</li>
+              <li>เขตอุตสาหกรรมบางบอน/ดอนหัวฬ่อ — พื้นที่โรงงานและคลังสินค้า</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="gallery">
+            <h2 id="gallery">แกลเลอรี่ (ภาพตัวอย่าง)</h2>
+            <div class="gallery" role="list">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="เรือประมง" role="listitem"/>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ตลาดปลา" role="listitem"/>
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ทิวทัศน์ชายฝั่ง" role="listitem"/>
+            </div>
+            <p class="small">(ภาพตัวอย่างจากแหล่งภาพสาธารณะ — เปลี่ยนเป็นภาพจริงของจังหวัดเมื่อต้องการ)</p>
+          </section>
+
+          <section aria-labelledby="more">
+            <h2 id="more">ข้อมูลเพิ่มเติม / การนำเสนอ</h2>
+            <div class="tabs" role="tablist" aria-label="ตัวเลือกการนำเสนอ">
+              <button class="tab active" data-tab="overview">สรุป</button>
+              <button class="tab" data-tab="timeline">ไทม์ไลน์</button>
+              <button class="tab" data-tab="facts">ตัวเลขสำคัญ</button>
+            </div>
+
+            <div id="tab-content" class="small">
+              <div data-panel="overview">
+                สมุทรสาครเป็นจังหวัดที่ผสมผสานระหว่างวิถีชุมชนประมงและการพัฒนาอุตสาหกรรม เหมาะสำหรับการศึกษาเชิงเศรษฐกิจ สังคม และสิ่งแวดล้อมชายฝั่ง
+              </div>
+              <div data-panel="timeline" style="display:none">
+                <strong>สมัยอยุธยา:</strong> เมืองท่าค้าขายกับต่างชาติ<br>
+                <strong>รัชกาลที่ 4:</strong> เริ่มใช้ชื่อสมุทรสาคร<br>
+                <strong>พ.ศ. 2500s — ปัจจุบัน:</strong> ขยายตัวทางอุตสาหกรรมและประมง
+              </div>
+              <div data-panel="facts" style="display:none">
+                จำนวนประชากร (โดยประมาณ): — คน<br>
+                พื้นที่: — ตารางกิโลเมตร<br>
+                สินค้าส่งออกเด่น: อาหารทะเลแปรรูป, สินค้าเกษตรแปรรูป
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <footer>
+          ข้อมูลสรุปสำหรับการพรีเซนเทชั่น — ปรับแต่งเพิ่มเติมได้ตามต้องการ
+        </footer>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div>
+              <div class="badge">จังหวัดสมุทรสาคร</div>
+              <div style="margin-top:8px;font-weight:700">ข้อมูลด่วน</div>
+            </div>
+            <div class="small">อัปเดตล่าสุด: <strong>ไม่ระบุ</strong></div>
+          </div>
+
+          <section style="margin-top:12px">
+            <h3 style="margin:0 0 8px 0">ติดต่อ (ตัวอย่าง)</h3>
+            <p class="small">สำนักงานจังหวัดสมุทรสาคร<br>โทร: 0x-xxx-xxxx<br>เว็บไซต์: ตัวอย่าง</p>
+          </section>
+
+          <section style="margin-top:12px">
+            <h3 style="margin:0 0 8px 0">ใช้ในการสอน</h3>
+            <ul class="small">
+              <li>สไลด์สั้น 5 หน้า</li>
+              <li>แผนที่และข้อมูลสถิติ (เพิ่มแหล่งข้อมูลจริง)</li>
+              <li>กิจกรรม: วิเคราะห์ผลกระทบจากอุตสาหกรรม</li>
+            </ul>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.tab;
+        document.querySelectorAll('[data-panel]').forEach(panel=>{
+          panel.style.display = (panel.getAttribute('data-panel')===target) ? '' : 'none';
+        });
+      });
+    });
+
+    // small accessibility: keyboard focus for tabs
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('keydown',e=>{
+      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+        const tabs = Array.from(document.querySelectorAll('.tab'));
+        const idx = tabs.indexOf(e.target);
+        const next = e.key === 'ArrowRight' ? (idx+1)%tabs.length : (idx-1+tabs.length)%tabs.length;
+        tabs[next].focus();
+      }
+    }));
+  </script>
+</body>
+</html>
