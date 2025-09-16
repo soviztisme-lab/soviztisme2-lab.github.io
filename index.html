@@ -2,204 +2,139 @@
 <html lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>จังหวัดสมุทรสาคร — พรีเซนเทชั่น</title>
-  <meta name="description" content="ข้อมูลจังหวัดสมุทรสาคร: ประวัติ ความสำคัญทางเศรษฐกิจ สถานที่สำคัญ และภาพรวมทั่วไป" />
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>นำเสนอจังหวัดสมุทรสาคร</title>
   <style>
-    :root{
-      --bg:#f7fbff; --card:#ffffff; --accent:#0b6cff; --muted:#6b7280; --accent-2:#0466c8;
-      --max-width:1000px;
-    }
-    *{box-sizing:border-box}
-    body{font-family:'Kanit',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#0f1724; line-height:1.5}
-    .container{max-width:var(--max-width); margin:32px auto; padding:20px}
-    header{display:flex;gap:20px;align-items:center}
-    .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
-    h1{margin:0;font-size:28px}
-    p.lead{margin:6px 0 0;color:var(--muted)}
-
-    /* layout */
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:24px}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,30,60,0.06)}
-
-    /* hero image */
-    .hero{height:220px;border-radius:10px;overflow:hidden;background:#dbeafe;display:flex;align-items:center;justify-content:center}
+    :root{--accent:#0b6e4f;--muted:#666}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;margin:0;color:#111}
+    header{background:linear-gradient(120deg,#f8fafc,#e8f6f0);padding:28px 20px;border-bottom:1px solid #eee}
+    .container{max-width:1000px;margin:20px auto;padding:0 16px}
+    h1{margin:.2rem 0;font-size:1.6rem;color:var(--accent)}
+    .lead{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:2fr 1fr}}
+    .card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    .hero{height:240px;border-radius:10px;overflow:hidden}
     .hero img{width:100%;height:100%;object-fit:cover;display:block}
-
-    /* sections */
-    section + section{margin-top:16px}
-    .small{font-size:14px;color:var(--muted)}
-
-    /* info list */
-    dl{display:grid;grid-template-columns:140px 1fr;gap:8px 12px}
-    dt{font-weight:600;color:#0b6cff}
-
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery img{width:100%;height:96px;object-fit:cover;border-radius:8px}
-
-    /* sidebar */
-    aside .card{position:sticky;top:24px}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#e6f0ff;color:var(--accent);font-weight:600;font-size:13px}
-
-    /* tabs */
-    .tabs{display:flex;gap:8px;margin-bottom:12px}
-    .tab{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid #eef2ff;color:var(--accent);cursor:pointer}
-    .tab.active{background:var(--accent);color:white;border-color:var(--accent)}
-
-    /* footer */
-    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* responsive */
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .hero{height:160px}
-    }
-
-    /* print */
-    @media print{
-      body{background:white}
-      .container{margin:0;padding:0}
-      aside{display:none}
-      header .logo{display:none}
-    }
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    nav a{padding:8px 12px;border-radius:999px;text-decoration:none;background:#f1f5f4;color:#053; font-size:0.9rem}
+    ul.facts{list-style:none;padding:0;margin:8px 0 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    ul.facts li{background:#f9fafb;padding:8px;border-radius:8px}
+    .map{height:220px;border-radius:8px;overflow:hidden}
+    footer{padding:20px;text-align:center;color:#666;font-size:0.9rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none}
+    .btn--primary{background:var(--accent);color:white}
+    .attraction{display:flex;gap:10px;align-items:flex-start}
+    .attraction img{width:110px;height:72px;object-fit:cover;border-radius:8px}
+    code{background:#f3f4f6;padding:6px;border-radius:6px;display:block}
   </style>
 </head>
 <body>
-  <main class="container" role="main">
-    <header>
-      <div class="logo" aria-hidden>สค.</div>
-      <div>
-        <h1>จังหวัดสมุทรสาคร</h1>
-        <p class="lead">เมืองประมงและอุตสาหกรรมที่สำคัญของประเทศไทย — ประวัติ, เศรษฐกิจ, สถานที่สำคัญ</p>
-      </div>
-    </header>
-
-    <div class="grid">
-      <div>
-        <div class="card">
-          <div class="hero" aria-hidden>
-            <!-- ใส่ภาพจริง: แทนที่ URL ด้านล่างเมื่อพร้อม -->
-            <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ภาพวิวชายฝั่งมหาชัย" />
-          </div>
-
-          <section aria-labelledby="history">
-            <h2 id="history">ประวัติความเป็นมา</h2>
-            <p class="small">จังหวัดสมุทรสาครเดิมเป็นเมืองท่าที่สำคัญ มีชุมชนการค้ากับชาวจีนตั้งแต่สมัยอยุธยา เมืองมหาชัยถูกขยายและพัฒนาเป็นท่าเรือ ต่อมารัชกาลที่ 4 ได้มีการใช้ชื่อว่า <strong>สมุทรสาคร</strong> พื้นที่เติบโตด้วยการประมงและการขนส่งทางน้ำ</p>
-          </section>
-
-          <section aria-labelledby="economy">
-            <h2 id="economy">เศรษฐกิจและอุตสาหกรรม</h2>
-            <p class="small">สมุทรสาครได้รับสมญานามว่า "เมืองประมง" มีอุตสาหกรรมแปรรูปอาหารทะเล ตลาดมหาชัยเป็นศูนย์กลางการจำหน่ายอาหารทะเล นอกเหนือจากประมง ยังมีโรงงานอุตสาหกรรมการผลิต เช่น สิ่งทอ และคลัสเตอร์โรงงานเพื่อการส่งออก</p>
-            <dl>
-              <dt>คำขวัญ</dt><dd>เมืองประมง ดงโรงงาน ลานเกษตร เขตประวัติศาสตร์</dd>
-              <dt>ชื่อเดิม</dt><dd>มหาชัย</dd>
-              <dt>ตำแหน่ง</dt><dd>ปากแม่น้ำท่าจีน ริมอ่าวไทย</dd>
-            </dl>
-          </section>
-
-          <section aria-labelledby="landmarks">
-            <h2 id="landmarks">สถานที่สำคัญ</h2>
-            <ul>
-              <li>ตลาดมหาชัย — ตลาดอาหารทะเลสดและแปรรูป</li>
-              <li>วัดช่องลม และ วัดภุมรินทร์กุฎีทอง — วัดเก่าแก่ของพื้นที่</li>
-              <li>เขตอุตสาหกรรมบางบอน/ดอนหัวฬ่อ — พื้นที่โรงงานและคลังสินค้า</li>
-            </ul>
-          </section>
-
-          <section aria-labelledby="gallery">
-            <h2 id="gallery">แกลเลอรี่ (ภาพตัวอย่าง)</h2>
-            <div class="gallery" role="list">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="เรือประมง" role="listitem"/>
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ตลาดปลา" role="listitem"/>
-              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="ทิวทัศน์ชายฝั่ง" role="listitem"/>
-            </div>
-            <p class="small">(ภาพตัวอย่างจากแหล่งภาพสาธารณะ — เปลี่ยนเป็นภาพจริงของจังหวัดเมื่อต้องการ)</p>
-          </section>
-
-          <section aria-labelledby="more">
-            <h2 id="more">ข้อมูลเพิ่มเติม / การนำเสนอ</h2>
-            <div class="tabs" role="tablist" aria-label="ตัวเลือกการนำเสนอ">
-              <button class="tab active" data-tab="overview">สรุป</button>
-              <button class="tab" data-tab="timeline">ไทม์ไลน์</button>
-              <button class="tab" data-tab="facts">ตัวเลขสำคัญ</button>
-            </div>
-
-            <div id="tab-content" class="small">
-              <div data-panel="overview">
-                สมุทรสาครเป็นจังหวัดที่ผสมผสานระหว่างวิถีชุมชนประมงและการพัฒนาอุตสาหกรรม เหมาะสำหรับการศึกษาเชิงเศรษฐกิจ สังคม และสิ่งแวดล้อมชายฝั่ง
-              </div>
-              <div data-panel="timeline" style="display:none">
-                <strong>สมัยอยุธยา:</strong> เมืองท่าค้าขายกับต่างชาติ<br>
-                <strong>รัชกาลที่ 4:</strong> เริ่มใช้ชื่อสมุทรสาคร<br>
-                <strong>พ.ศ. 2500s — ปัจจุบัน:</strong> ขยายตัวทางอุตสาหกรรมและประมง
-              </div>
-              <div data-panel="facts" style="display:none">
-                จำนวนประชากร (โดยประมาณ): — คน<br>
-                พื้นที่: — ตารางกิโลเมตร<br>
-                สินค้าส่งออกเด่น: อาหารทะเลแปรรูป, สินค้าเกษตรแปรรูป
-              </div>
-            </div>
-          </section>
-
-        </div>
-
-        <footer>
-          ข้อมูลสรุปสำหรับการพรีเซนเทชั่น — ปรับแต่งเพิ่มเติมได้ตามต้องการ
-        </footer>
-      </div>
-
-      <aside>
-        <div class="card">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-            <div>
-              <div class="badge">จังหวัดสมุทรสาคร</div>
-              <div style="margin-top:8px;font-weight:700">ข้อมูลด่วน</div>
-            </div>
-            <div class="small">อัปเดตล่าสุด: <strong>ไม่ระบุ</strong></div>
-          </div>
-
-          <section style="margin-top:12px">
-            <h3 style="margin:0 0 8px 0">ติดต่อ (ตัวอย่าง)</h3>
-            <p class="small">สำนักงานจังหวัดสมุทรสาคร<br>โทร: 0x-xxx-xxxx<br>เว็บไซต์: ตัวอย่าง</p>
-          </section>
-
-          <section style="margin-top:12px">
-            <h3 style="margin:0 0 8px 0">ใช้ในการสอน</h3>
-            <ul class="small">
-              <li>สไลด์สั้น 5 หน้า</li>
-              <li>แผนที่และข้อมูลสถิติ (เพิ่มแหล่งข้อมูลจริง)</li>
-              <li>กิจกรรม: วิเคราะห์ผลกระทบจากอุตสาหกรรม</li>
-            </ul>
-          </section>
-        </div>
-      </aside>
+  <header>
+    <div class="container">
+      <h1>จังหวัดสมุทรสาคร</h1>
+      <p class="lead">สรุปข้อมูลสำคัญ ประวัติ แหล่งท่องเที่ยวและเศรษฐกิจ — เหมาะสำหรับการ present และนำขึ้น GitHub</p>
+      <nav>
+        <a href="#history">ประวัติ</a>
+        <a href="#economy">เศรษฐกิจ</a>
+        <a href="#attractions">สถานที่น่าสนใจ</a>
+        <a href="#gallery">ภาพ</a>
+        <a href="#github">วิธีลง GitHub</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <article class="card">
+        <div class="hero">
+          <!-- แทนที่ src ด้วยรูปภาพจริงของจังหวัด -->
+          <img src="images/mahachai-market.jpg" alt="ตลาดมหาชัย">
+        </div>
+
+        <h2 id="history">ประวัติ</h2>
+        <p>จังหวัดสมุทรสาครเดิมชื่อ "มหาชัย" เป็นเมืองท่าที่มีความสำคัญตั้งแต่สมัยกรุงศรีอยุธยา ต่อมาเปลี่ยนชื่อเป็นสมุทรสาครในรัชกาลที่ 4 เมืองนี้มีบทบาทด้านการประมงและการค้าทางทะเลมายาวนาน</p>
+
+        <h3 id="economy">เศรษฐกิจ</h3>
+        <p>สมุทรสาครเป็นศูนย์กลางอุตสาหกรรมประมง การแปรรูปสัตว์น้ํา รวมถึงโรงงานอุตสาหกรรมหลากหลายประเภท ตลาดมหาชัยเป็นตลาดอาหารทะเลที่มีชื่อเสียง</p>
+
+        <h3 id="attractions">สถานที่น่าสนใจ</h3>
+        <div class="attraction">
+          <img src="images/thachalom-boat.jpg" alt="ท่าฉลอม">
+          <div>
+            <strong>ท่าฉลอม / ตลาดน้ำ</strong>
+            <p class="lead">ย่านเก่าแก่ริมคลองและชุมชนที่ยังคงบรรยากาศดั้งเดิม</p>
+          </div>
+        </div>
+        <div style="height:8px"></div>
+        <div class="attraction">
+          <img src="images/maha-bridge.jpg" alt="สะพานแดง">
+          <div>
+            <strong>สะพานแดงที่ชายฝั่ง</strong>
+            <p class="lead">จุดชมวิวพระอาทิตย์ตกและกิจกรรมชายฝั่ง</p>
+          </div>
+        </div>
+
+      </article>
+
+      <aside class="card">
+        <h3>ข้อมูลเบื้องต้น</h3>
+        <ul class="facts">
+          <li><strong>อำเภอหลัก</strong><br>เมืองสมุทรสาคร</li>
+          <li><strong>สมญานาม</strong><br>เมืองประมง</li>
+          <li><strong>ระยะทางจาก กทม.</strong><br>ประมาณ 40 กม.</li>
+          <li><strong>คำขวัญ</strong><br>เมืองประมง ดงโรงงาน ลานเกษตร เขตประวัติศาสตร์</li>
+        </ul>
+
+        <h4>แผนที่ (ตัวอย่าง)</h4>
+        <div class="map">
+          <!-- ใส่ iframe แผนที่ Google Maps หากต้องการ (ใส่ API/URL ของคุณ) -->
+          <img src="images/map-placeholder.png" alt="map placeholder" style="width:100%;height:100%;object-fit:cover">
+        </div>
+
+        <h4 style="margin-top:10px">ดาวน์โหลด</h4>
+        <p>ไฟล์นี้เป็น HTML เดี่ยว (single-file) สามารถนำไปอัปโหลดบน GitHub Pages ได้</p>
+        <a class="btn btn--primary" href="#github">วิธีลง GitHub</a>
+      </aside>
+    </section>
+
+    <section class="card" id="gallery" style="margin-top:16px">
+      <h2>แกลเลอรี</h2>
+      <p class="lead">แทนที่รูปภาพในโฟลเดอร์ <code>images/</code> ด้วยรูปจริงก่อนอัปโหลด</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:8px">
+        <img src="images/mahachai-market-1.jpg" alt="ตลาด">
+        <img src="images/seafood-processing.jpg" alt="โรงงานแปรรูป">
+        <img src="images/thachalom-canal.jpg" alt="คลองท่าฉลอม">
+        <img src="images/sunset-jetty.jpg" alt="พระอาทิตย์ตก">
+      </div>
+    </section>
+
+    <section class="card" id="github" style="margin-top:16px">
+      <h2>วิธีนำขึ้น GitHub (สรุป)</h2>
+      <p class="lead">ขั้นตอนสั้น ๆ เพื่ออัปโหลดโปรเจกต์นี้เป็น repository และใช้ GitHub Pages</p>
+      <ol>
+        <li>สร้างโฟลเดอร์โปรเจกต์ แล้ววางไฟล์นี้เป็น <code>index.html</code> และเพิ่มโฟลเดอร์ <code>images/</code> ที่มีรูปจริง</li>
+        <li>เปิดเทอร์มินัลแล้วรันคำสั่งต่อไปนี้:</li>
+      </ol>
+      <code>git init
+git add .
+git commit -m "Initial commit: Samut Sakhon presentation"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main</code>
+      <p>จากนั้นไปที่ GitHub > Settings ของ repository เลือก Pages และตั้งเป็นสาขา <code>main</code> เพื่อเปิดใช้งาน GitHub Pages</p>
+    </section>
+
   </main>
 
-  <script>
-    // Tab switching
-    document.querySelectorAll('.tab').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-        btn.classList.add('active');
-        const target = btn.dataset.tab;
-        document.querySelectorAll('[data-panel]').forEach(panel=>{
-          panel.style.display = (panel.getAttribute('data-panel')===target) ? '' : 'none';
-        });
-      });
-    });
+  <footer>
+    สร้างโดย: ผู้ใช้ — แก้ไขรูปและข้อความตามต้องการ
+  </footer>
 
-    // small accessibility: keyboard focus for tabs
-    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('keydown',e=>{
-      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
-        const tabs = Array.from(document.querySelectorAll('.tab'));
-        const idx = tabs.indexOf(e.target);
-        const next = e.key === 'ArrowRight' ? (idx+1)%tabs.length : (idx-1+tabs.length)%tabs.length;
-        tabs[next].focus();
-      }
+  <script>
+    // เล็กน้อย: ปุ่มนำทางเลื่อนสมูท
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{
+      e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     }));
   </script>
 </body>
